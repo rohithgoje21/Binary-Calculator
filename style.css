@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 33%;
+    position: relative;
+    top: 200px;
+    left:200px;
+}
+
+
+#res{
+    overflow-x: scroll;
+    padding: 5px 5px 0px 5px;
+    background-color: lightgray;
+    border: 2px solid black;
+    height: 48px;
+    font-size: 20px;
+}
+#btn1,
+#btn0 {
+    background-color: lightgreen;
+    color: brown;
+}
+
+#btnEql,
+#btnClr {
+    background-color: darkgreen;
+    color: white;
+}
+
+#btnSum,
+#btnSub,
+#btnMul,
+#btnDiv {
+    background-color: black;
+    color: red;
+}
+
+.upper,
+.lower {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    width: 23.4%;
+    height: 46px;
+    font-size: 24px;
+    cursor: pointer;
+}
+#btnMul{
+    padding-top: 10px;
+}
+.btns{
+    background-color:rgb(114, 115, 115);
+    padding-bottom: 14px;
+}
