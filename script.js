@@ -54,28 +54,29 @@ function display(bit) {
 
 btnEql.addEventListener("click", () => {
 
-    
+    // console.log(userinput)
     var input = checkUserInputValidity(userinput);
-    console.log(input)
+    // console.log(input)
 
     function checkUserInputValidity(str) {
-        for (let i = 0; i < str.length; i++) {
-            if (str[0] != "1" && str[0] != "0") {
-                str = str.substring(1)
-            } else if (str[str.length - 1] != "1" && str[str.length - 1] != "0") {
-                str = str.substring(0, str.length - 1)
-            } else {
-                break;
+        let i = 0;
+        while (i < str.length) {
+            if ((str[i] != "1" && str[i] != "0") && (str[i + 1] != "1" && str[i + 1] != "0")) {
+                str = str.substring(0, i) + str.substring(i + 1)
+                i -= 1
             }
+            i += 1
         }
+        if (str[0] != "1" && str[0] != "0") {
+            str = str.substring(1)
+        }
+        // console.log(str)
         return str;
     }
 
-
-
     var ops = []
     let binStrArr = splitUserInputToStrArr(input);
-    console.log(binStrArr)
+    // console.log(binStrArr)
 
     function splitUserInputToStrArr(input) {
         var binResult = "";
@@ -94,13 +95,8 @@ btnEql.addEventListener("click", () => {
         return binStr
     }
 
-
-
-
-
-
     numsArr = binaryNumsArrToDecimalNumsArr(binStrArr);
-    console.log(numsArr)
+    // console.log(numsArr)
 
     function binaryNumsArrToDecimalNumsArr(arr) {
         var Nums = []
@@ -111,13 +107,8 @@ btnEql.addEventListener("click", () => {
         return Nums;
     }
 
-
-
-
-
-
     finalResult = numsArrToBinary(numsArr)
-    console.log(finalResult)
+    // console.log(finalResult)
 
     function numsArrToBinary(arr) {
         var decResult = arr[0];
@@ -136,7 +127,7 @@ btnEql.addEventListener("click", () => {
         // console.log(binResult)
         return binResult
     }
-    res.innerText=finalResult
+    res.innerText = finalResult
 
 })
 
