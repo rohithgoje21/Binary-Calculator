@@ -1,16 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body {
-    width: 33%;
-    position: relative;
-    top: 200px;
-    left:200px;
+
+.container {
+    width: 600px;
+    margin: 33vh auto;
 }
 
-
-#res{
+#res {
     overflow-x: scroll;
     padding: 5px 5px 0px 5px;
     background-color: lightgray;
@@ -18,6 +16,7 @@ body {
     height: 48px;
     font-size: 20px;
 }
+
 #btn1,
 #btn0 {
     background-color: lightgreen;
@@ -51,10 +50,18 @@ button {
     font-size: 24px;
     cursor: pointer;
 }
-#btnMul{
+
+#btnMul {
     padding-top: 10px;
 }
-.btns{
-    background-color:rgb(114, 115, 115);
+
+.btns {
+    background-color: rgb(114, 115, 115);
     padding-bottom: 14px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
 }

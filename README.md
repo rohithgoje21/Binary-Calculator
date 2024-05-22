@@ -35,4 +35,4 @@ To run the Binary Calculator locally, follow these steps:
    ```bash
    git clone https://github.com/rohithgoje21/Binary-Calculator.git
    
-2.cd Binary-Calculator
+2. cd Binary-Calculator
